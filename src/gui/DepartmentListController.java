@@ -40,10 +40,10 @@ public class DepartmentListController implements Initializable, DataChangeListen
 	private TableView<Department> tableViewDepartment;
 
 	@FXML
-	private TableColumn<Department, Integer> tableColumId;
+	private TableColumn<Department, Integer> tableColumnId;
 
 	@FXML
-	private TableColumn<Department, String> tableColumName;
+	private TableColumn<Department, String> tableColumnName;
 
 	@FXML
 	private TableColumn<Department, Department> tableColumnEDIT;
@@ -73,8 +73,8 @@ public class DepartmentListController implements Initializable, DataChangeListen
 	}
 
 	private void initializeNodes() {
-		tableColumId.setCellValueFactory(new PropertyValueFactory<>("id"));
-		tableColumName.setCellValueFactory(new PropertyValueFactory<>("name"));
+		tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
+		tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
 
 		Stage stage = (Stage) Main.getMainScene().getWindow();
 		tableViewDepartment.prefHeightProperty().bind(stage.heightProperty());
